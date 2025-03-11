@@ -24,18 +24,10 @@ export default function Favoritos() {
 
     const cores = ["#BAE2FF", "#B9FFDD", "#FFE8AC", "#FFCAB9", "#F99494", "#9DD6FF", "#ECA1FF", "#DAFF8B", "#FFA285", "#CDCDCD", "#979797", "#A99A7C"];
 
-    /* 
-        const alterarCor = (cor) => {
-            setBgColor(cor);
-            setModalAberto(false); // Fecha o modal após a seleção
-        }; */
-
     function alterarCor(cor) {
         setBgColor(cor);
         setModalAberto(false);
     }
-
-
 
 
     useEffect(() => {
@@ -57,7 +49,7 @@ export default function Favoritos() {
 
             <div className="notas-favoritas " style={{ position: 'relative', height: '100vh' }} >
                 <Draggable nodeRef={divRef} bounds="parent">
-                    <div ref={divRef} className="div-card-fav" style={{ backgroundColor: bgColor, position: 'relative' }}>
+                    <div ref={divRef} className="div-card-fav" style={{ backgroundColor: bgColor, position: 'absolute' }}>
                         <div className="div-child-1">
                             <input
                                 className="input-criar-1"
@@ -123,6 +115,10 @@ export default function Favoritos() {
                         }
                     </div>
                 </Draggable>
+
+
+
+
             </div>
         </div>
     )
