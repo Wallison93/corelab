@@ -5,6 +5,7 @@ import CriarNota from "./_criar-nota/Criar_nota";
 import Favoritos from "./_favoritos/favoritos";
 
 export default function Home() {
+  
   return (
     <div className="div-home-principal">
 

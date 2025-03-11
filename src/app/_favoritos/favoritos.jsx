@@ -16,6 +16,8 @@ export default function Favoritos() {
     const [checked, setChecked] = useState(false);
     const [bgColor, setBgColor] = useState("#fff");
     const [modalAberto, setModalAberto] = useState(false);
+    const [titulo, setTitulo] = useState("");
+    const [nota, setNota] = useState("");
 
     const cores = ["#BAE2FF", "#B9FFDD", "#FFE8AC", "#FFCAB9", "#F99494", "#9DD6FF", "#ECA1FF", "#DAFF8B", "#FFA285", "#CDCDCD", "#979797", "#A99A7C"];
 
@@ -33,31 +35,36 @@ export default function Favoritos() {
                 Favoritos
             </label>
 
-            <div className="notas-favoritas "  style={{ position: 'relative', height:'100vh'}} >
+            <div className="notas-favoritas " style={{ position: 'relative', height: '100vh' }} >
                 <Draggable nodeRef={divRef} bounds="parent">
-                    <div ref={divRef} className="div-card-fav" style={{ backgroundColor: bgColor, position: 'relative'  }}>
+                    <div ref={divRef} className="div-card-fav" style={{ backgroundColor: bgColor, position: 'relative' }}>
                         <div className="div-child-1">
-                            <h3>
-                                Título
-                            </h3>
-                    <label className="star-checkbox">
-                        <input
-                            type="checkbox"
-                            checked={checked}
-                            onChange={() => setChecked(!checked)}
-                            className="hidden"
-                        />
-                        {checked ?
-                            <IoMdStar className="star filled" />
-                            :
-                            <IoIosStarOutline className="star" />
-                        }
-                    </label>
+                            <input
+                                className="input-criar-1"
+                                placeholder="Título"
+                                type="text"
+                                onChange={(e) => setTitulo(e.target.value)}
+                                value={titulo} />
+                            <label className="star-checkbox">
+                                <input
+                                    type="checkbox"
+                                    checked={checked}
+                                    onChange={() => setChecked(!checked)}
+                                    className="hidden"
+                                />
+                                {checked ?
+                                    <IoMdStar className="star filled" />
+                                    :
+                                    <IoIosStarOutline className="star" />
+                                }
+                            </label>
                         </div>
                         <div className="div-child-2">
-                            <a className="texto-quebra">
-                                conteudo
-                            </a>
+                            <textarea
+                                className="input-criar-3"
+                                placeholder="Conteúdo"
+                                onChange={(e) => setNota(e.target.value)}
+                                value={nota} />
                         </div>
                         <div className="div-child-3">
                             <div className="primeiros-icones">
@@ -84,8 +91,6 @@ export default function Favoritos() {
                         }
                     </div>
                 </Draggable>
-
-
 
             </div>
 
