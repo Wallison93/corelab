@@ -201,6 +201,25 @@ body {
 }
 
 
+.icone-add{
+  width: 20px;
+  height: 20px;
+}
+
+.div-icone-add{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 10px;
+}
+
+.btn-base{
+  border: none;
+  background-color: transparent;
+}
+
+
 /* .div-card-fav {
   flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
