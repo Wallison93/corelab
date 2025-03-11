@@ -120,6 +120,7 @@ body {
   font-weight: bold;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 .input-criar-1 :focus{
@@ -165,6 +166,7 @@ border: 0px;
   font-size: 14px;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 
@@ -177,6 +179,7 @@ border: 0px;
   font-size: 14px;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 
